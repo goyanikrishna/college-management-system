@@ -1,0 +1,29 @@
+{
+  "name": "nodejs-practice",
+  "version": "2022.05.07",
+  "description": "My first app",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.20.0",
+    "cors": "^2.8.5",
+    "date-and-time": "^2.3.1",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "express-fileupload": "^1.4.0",
+    "express-validator": "^6.14.1",
+    "joi": "^17.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^4.6.0",
+    "mongoose": "^6.3.5",
+    "node-cron": "^3.0.0",
+    "nodemailer": "^6.7.5",
+    "swagger-ui-express": "^4.4.0"
+  }
+}

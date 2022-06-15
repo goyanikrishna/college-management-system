@@ -1,0 +1,2581 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0",
+    "title": "College Management System",
+    "contact": {}
+  },
+  "host": "localhost:3000",
+  "basePath": "/api",
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/admin/register": {
+      "post": {
+        "summary": "Register",
+        "tags": [
+          "Admins"
+        ],
+        "operationId": "register",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/RegisterRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/admin/activateAccount": {
+      "post": {
+        "summary": "Activate Account",
+        "tags": [
+          "Admins"
+        ],
+        "operationId": "activateAccount",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/activateAccountRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/admin/login": {
+      "post": {
+        "summary": "Login",
+        "tags": [
+          "Admins"
+        ],
+        "operationId": "login",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/LoginRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/admin/forgetPassword": {
+      "post": {
+        "summary": "Forget Password",
+        "tags": [
+          "Admins"
+        ],
+        "operationId": "forgetPassword",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/forgetPasswordRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/admin/verifyOtpCode": {
+      "post": {
+        "summary": "Verify Otp Code",
+        "tags": [
+          "Admins"
+        ],
+        "operationId": "verifyOtpCode",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/verifyOtpCodeRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/admin/changePassword": {
+      "post": {
+        "summary": "Change Password",
+        "tags": [
+          "Admins"
+        ],
+        "operationId": "changePassword",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/changePasswordRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/admin/add": {
+      "post": {
+        "summary": "Add",
+        "tags": [
+          "Admins"
+        ],
+        "operationId": "PostAdd",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/AddAdmin"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/admin/get": {
+      "get": {
+        "summary": "Get",
+        "tags": [
+          "Admins"
+        ],
+        "operationId": "Get1",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/admin/getById": {
+      "get": {
+        "summary": "Get Admin By Id",
+        "tags": [
+          "Admins"
+        ],
+        "operationId": "GetAdminById",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/admin/update": {
+      "post": {
+        "summary": "Edit",
+        "tags": [
+          "Admins"
+        ],
+        "operationId": "Edit",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/EditAdmin"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/admin/delete": {
+      "delete": {
+        "summary": "Delete",
+        "tags": [
+          "Admins"
+        ],
+        "operationId": "Delete1",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/attendance/add": {
+      "post": {
+        "summary": "Add",
+        "tags": [
+          "Attendance"
+        ],
+        "operationId": "PostAdd",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/AddAttendance"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/attendance/get": {
+      "get": {
+        "summary": "Get",
+        "tags": [
+          "Attendance"
+        ],
+        "operationId": "Get1",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/attendance/getById": {
+      "get": {
+        "summary": "Get Attendance By Id",
+        "tags": [
+          "Attendance"
+        ],
+        "operationId": "GetAttendanceById",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/attendance/update": {
+      "post": {
+        "summary": "Edit",
+        "tags": [
+          "Attendance"
+        ],
+        "operationId": "Edit",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/EditAttendance"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/attendance/delete": {
+      "delete": {
+        "summary": "Delete",
+        "tags": [
+          "Attendance"
+        ],
+        "operationId": "Delete1",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/division/add": {
+      "post": {
+        "summary": "Add",
+        "tags": [
+          "Division"
+        ],
+        "operationId": "PostAdd",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/AddDivision"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/division/get": {
+      "get": {
+        "summary": "Get",
+        "tags": [
+          "Division"
+        ],
+        "operationId": "Get1",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/division/getById": {
+      "get": {
+        "summary": "Get Division By Id",
+        "tags": [
+          "Division"
+        ],
+        "operationId": "GetDivisionById",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/division/update": {
+      "post": {
+        "summary": "Edit",
+        "tags": [
+          "Division"
+        ],
+        "operationId": "Edit",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/EditDivision"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/division/delete": {
+      "delete": {
+        "summary": "Delete",
+        "tags": [
+          "Division"
+        ],
+        "operationId": "Delete1",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/result/add": {
+      "post": {
+        "summary": "Add",
+        "tags": [
+          "Result"
+        ],
+        "operationId": "PostAdd",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/AddResult"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/result/get": {
+      "get": {
+        "summary": "Get",
+        "tags": [
+          "Result"
+        ],
+        "operationId": "Get1",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/result/getById": {
+      "get": {
+        "summary": "Get Result By Id",
+        "tags": [
+          "Result"
+        ],
+        "operationId": "GetResultById",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/result/update": {
+      "post": {
+        "summary": "Edit",
+        "tags": [
+          "Result"
+        ],
+        "operationId": "Edit",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/EditResult"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/result/delete": {
+      "delete": {
+        "summary": "Delete",
+        "tags": [
+          "Result"
+        ],
+        "operationId": "Delete1",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/salary/add": {
+      "post": {
+        "summary": "Add",
+        "tags": [
+          "Salary"
+        ],
+        "operationId": "PostAdd",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/AddSalary"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/salary/get": {
+      "get": {
+        "summary": "Get",
+        "tags": [
+          "Salary"
+        ],
+        "operationId": "Get1",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/salary/getById": {
+      "get": {
+        "summary": "Get Salary By Id",
+        "tags": [
+          "Salary"
+        ],
+        "operationId": "GetSalaryById",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/salary/update": {
+      "post": {
+        "summary": "Edit",
+        "tags": [
+          "Salary"
+        ],
+        "operationId": "Edit",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/EditSalary"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/salary/delete": {
+      "delete": {
+        "summary": "Delete",
+        "tags": [
+          "Salary"
+        ],
+        "operationId": "Delete1",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/schedule/add": {
+      "post": {
+        "summary": "Add",
+        "tags": [
+          "Schedule"
+        ],
+        "operationId": "PostAdd",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/AddSchedule"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/schedule/get": {
+      "get": {
+        "summary": "Get",
+        "tags": [
+          "Schedule"
+        ],
+        "operationId": "Get1",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/schedule/getById": {
+      "get": {
+        "summary": "Get Schedule By Id",
+        "tags": [
+          "Schedule"
+        ],
+        "operationId": "GetScheduleById",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/schedule/update": {
+      "post": {
+        "summary": "Edit",
+        "tags": [
+          "Schedule"
+        ],
+        "operationId": "Edit",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/EditSchedule"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/schedule/delete": {
+      "delete": {
+        "summary": "Delete",
+        "tags": [
+          "Schedule"
+        ],
+        "operationId": "Delete1",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/student/register": {
+      "post": {
+        "summary": "Register",
+        "tags": [
+          "Students"
+        ],
+        "operationId": "register",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/RegisterRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/student/activateAccount": {
+      "post": {
+        "summary": "Activate Account",
+        "tags": [
+          "Students"
+        ],
+        "operationId": "activateAccount",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/activateAccountRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/student/login": {
+      "post": {
+        "summary": "Login",
+        "tags": [
+          "Students"
+        ],
+        "operationId": "login",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/LoginRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/student/forgetPassword": {
+      "post": {
+        "summary": "Forget Password",
+        "tags": [
+          "Students"
+        ],
+        "operationId": "forgetPassword",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/forgetPasswordRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/student/verifyOtpCode": {
+      "post": {
+        "summary": "Verify Otp Code",
+        "tags": [
+          "Students"
+        ],
+        "operationId": "verifyOtpCode",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/verifyOtpCodeRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/student/changePassword": {
+      "post": {
+        "summary": "Change Password",
+        "tags": [
+          "Students"
+        ],
+        "operationId": "changePassword",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/changePasswordRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/student/add": {
+      "post": {
+        "summary": "Add",
+        "tags": [
+          "Students"
+        ],
+        "operationId": "PostAdd",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/AddStudent"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/student/get": {
+      "get": {
+        "summary": "Get",
+        "tags": [
+          "Students"
+        ],
+        "operationId": "Get1",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/student/getById": {
+      "get": {
+        "summary": "Get Student By Id",
+        "tags": [
+          "Students"
+        ],
+        "operationId": "GetStudentById",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/student/update": {
+      "post": {
+        "summary": "Edit",
+        "tags": [
+          "Students"
+        ],
+        "operationId": "Edit",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/EditStudent"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/student/delete": {
+      "delete": {
+        "summary": "Delete",
+        "tags": [
+          "Students"
+        ],
+        "operationId": "Delete1",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/teacher/register": {
+      "post": {
+        "summary": "Register",
+        "tags": [
+          "Teachers"
+        ],
+        "operationId": "register",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/RegisterRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/teacher/activateAccount": {
+      "post": {
+        "summary": "Activate Account",
+        "tags": [
+          "Teachers"
+        ],
+        "operationId": "activateAccount",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/activateAccountRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/teacher/login": {
+      "post": {
+        "summary": "Login",
+        "tags": [
+          "Teachers"
+        ],
+        "operationId": "login",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/LoginRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/teacher/forgetPassword": {
+      "post": {
+        "summary": "Forget Password",
+        "tags": [
+          "Teachers"
+        ],
+        "operationId": "forgetPassword",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/forgetPasswordRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/teacher/verifyOtpCode": {
+      "post": {
+        "summary": "Verify Otp Code",
+        "tags": [
+          "Teachers"
+        ],
+        "operationId": "verifyOtpCode",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/verifyOtpCodeRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/teacher/changePassword": {
+      "post": {
+        "summary": "Change Password",
+        "tags": [
+          "Teachers"
+        ],
+        "operationId": "changePassword",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/changePasswordRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/teacher/add": {
+      "post": {
+        "summary": "Add",
+        "tags": [
+          "Teachers"
+        ],
+        "operationId": "PostAdd",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/AddTeacher"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/teacher/get": {
+      "get": {
+        "summary": "Get",
+        "tags": [
+          "Teachers"
+        ],
+        "operationId": "Get1",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/teacher/getById": {
+      "get": {
+        "summary": "Get Teacher By Id",
+        "tags": [
+          "Teachers"
+        ],
+        "operationId": "GetTeacherById",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/teacher/update": {
+      "post": {
+        "summary": "Edit",
+        "tags": [
+          "Teachers"
+        ],
+        "operationId": "Edit",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/EditTeacher"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/teacher/delete": {
+      "delete": {
+        "summary": "Delete",
+        "tags": [
+          "Teachers"
+        ],
+        "operationId": "Delete1",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "RegisterRequest": {
+      "title": "Register Request",
+      "example": {
+        "email": "email",
+        "password": "password",
+        "confirmPassword": "password"
+      },
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        },
+        "confirmPassword": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "email",
+        "password"
+      ]
+    },
+    "activateAccountRequest": {
+      "title": "Activate Account Request",
+      "example": {
+        "email": "email",
+        "accountActivationCode": "123456"
+      },
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string"
+        },
+        "accountActivationCode": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "email",
+        "accountActivationCode"
+      ]
+    },
+    "LoginRequest": {
+      "title": "Login Request",
+      "example": {
+        "email": "email",
+        "password": "password"
+      },
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "email",
+        "password"
+      ]
+    },
+    "forgetPasswordRequest": {
+      "title": "Forget Password Request",
+      "example": {
+        "email": "email"
+      },
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "email"
+      ]
+    },
+    "verifyOtpCodeRequest": {
+      "title": "Verify Otp Code Request",
+      "example": {
+        "email": "email",
+        "otpCode": "123456",
+        "newPassword": "newpassword",
+        "confirmPassword": "confirmpassword"
+      },
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string"
+        },
+        "otpCode": {
+          "type": "string"
+        },
+        "newPassword": {
+          "type": "string"
+        },
+        "confirmPassword": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "email",
+        "otpCode",
+        "newPassword",
+        "confirmPassword"
+      ]
+    },
+    "changePasswordRequest": {
+      "title": "Change Password Request",
+      "example": {
+        "email": "email",
+        "oldPassword": "oldpassword",
+        "newPassword": "newpassword",
+        "confirmPassword": "confirmpassword"
+      },
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string"
+        },
+        "oldPassword": {
+          "type": "string"
+        },
+        "newPassword": {
+          "type": "string"
+        },
+        "confirmPassword": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "email",
+        "oldPassword",
+        "newPassword",
+        "confirmPassword"
+      ]
+    },
+    "AddAdmin": {
+      "title": "Add Admin",
+      "example": {
+        "email": "email",
+        "password": "password",
+        "confirmPassword": "password",
+        "createdBy": "abc"
+      },
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        },
+        "confirmPassword": {
+          "type": "string"
+        },
+        "createdBy": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "email",
+        "password",
+        "confirmPassword",
+        "createdBy"
+      ]
+    },
+    "EditAdmin": {
+      "title": "EditAdmin",
+      "example": {
+        "id": "id",
+        "email": "email",
+        "password": "password",
+        "confirmPassword": "password",
+        "createdBy": "abc"
+      },
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        },
+        "confirmPassword": {
+          "type": "string"
+        },
+        "createdBy": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "email",
+        "password",
+        "confirmPassword",
+        "createdBy"
+      ]
+    },
+    "AddAttendance": {
+      "title": "Add Attendance",
+      "example": {
+        "studentId": 51,
+        "teacherId": 5,
+        "isPresent": true,
+        "remark": "no",
+        "attendanceTakenBy": "abc",
+        "attendanceType": "Full/Half"
+      },
+      "type": "object",
+      "properties": {
+        "studentId": {
+          "type": "number"
+        },
+        "teacherId": {
+          "type": "number"
+        },
+        "isPresent": {
+          "type": "boolean"
+        },
+        "remark": {
+          "type": "string"
+        },
+        "attendanceTakenBy": {
+          "type": "string"
+        },
+        "attendanceType": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "studentId",
+        "teacherId",
+        "isPresent",
+        "remark",
+        "attendanceTakenBy",
+        "attendanceType"
+      ]
+    },
+    "EditAttendance": {
+      "title": "EditAttendance",
+      "example": {
+        "id": "id",
+        "studentId": 51,
+        "teacherId": 5,
+        "isPresent": true,
+        "remark": "no",
+        "attendanceTakenBy": "abc",
+        "attendanceType": "Full/Half"
+      },
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "studentId": {
+          "type": "number"
+        },
+        "teacherId": {
+          "type": "number"
+        },
+        "isPresent": {
+          "type": "boolean"
+        },
+        "remark": {
+          "type": "string"
+        },
+        "attendanceTakenBy": {
+          "type": "string"
+        },
+        "attendanceType": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "studentId",
+        "teacherId",
+        "isPresent",
+        "remark",
+        "attendanceTakenBy",
+        "attendanceType"
+      ]
+    },
+    "AddDivision": {
+      "title": "Add Division",
+      "example": {
+        "class": "EC",
+        "section": 4,
+        "createdBy": "abc"
+      },
+      "type": "object",
+      "properties": {
+        "class": {
+          "type": "string"
+        },
+        "section": {
+          "type": "number"
+        },
+        "createdBy": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "class",
+        "section",
+        "createdBy"
+      ]
+    },
+    "EditDivision": {
+      "title": "EditDivision",
+      "example": {
+        "id": "id",
+        "class": "EC",
+        "section": 4,
+        "createdBy": "abc"
+      },
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "class": {
+          "type": "string"
+        },
+        "section": {
+          "type": "number"
+        },
+        "createdBy": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "class",
+        "section",
+        "createdBy"
+      ]
+    },
+    "AddResult": {
+      "title": "Add Result",
+      "example": {
+        "scheduleId": 256,
+        "passedStudents": 68,
+        "failedStudents": 1,
+        "resultDate": "06/05/2022",
+        "resultGeneratedBy": "abc"
+      },
+      "type": "object",
+      "properties": {
+        "scheduleId": {
+          "type": "number"
+        },
+        "passedStudents": {
+          "type": "number"
+        },
+        "failedStudents": {
+          "type": "number"
+        },
+        "resultDate": {
+          "type": "string"
+        },
+        "resultGeneratedBy": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "scheduleId",
+        "passedStudents",
+        "failedStudents",
+        "resultDate",
+        "resultGeneratedBy"
+      ]
+    },
+    "EditResult": {
+      "title": "EditResult",
+      "example": {
+        "id": "id",
+        "scheduleId": 256,
+        "passedStudents": 68,
+        "failedStudents": 1,
+        "resultDate": "06/05/2022",
+        "resultGeneratedBy": "abc"
+      },
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "scheduleId": {
+          "type": "number"
+        },
+        "passedStudents": {
+          "type": "number"
+        },
+        "failedStudents": {
+          "type": "number"
+        },
+        "resultDate": {
+          "type": "string"
+        },
+        "resultGeneratedBy": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "scheduleId",
+        "passedStudents",
+        "failedStudents",
+        "resultDate",
+        "resultGeneratedBy"
+      ]
+    },
+    "AddSalary": {
+      "title": "Add Salary",
+      "example": {
+        "teacherId": 5,
+        "basicSalary": 50000,
+        "extraPay": 1000,
+        "totalDays": 25
+      },
+      "type": "object",
+      "properties": {
+        "teacherId": {
+          "type": "number"
+        },
+        "basicSalary": {
+          "type": "number"
+        },
+        "extraPay": {
+          "type": "number"
+        },
+        "totalDays": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "teacherId",
+        "basicSalary",
+        "extraPay",
+        "totalDays"
+      ]
+    },
+    "EditSalary": {
+      "title": "EditSalary",
+      "example": {
+        "id": "id",
+        "teacherId": 5,
+        "basicSalary": 50000,
+        "extraPay": 1000,
+        "totalDays": 25
+      },
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "teacherId": {
+          "type": "number"
+        },
+        "basicSalary": {
+          "type": "number"
+        },
+        "extraPay": {
+          "type": "number"
+        },
+        "totalDays": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "id",
+        "teacherId",
+        "basicSalary",
+        "extraPay",
+        "totalDays"
+      ]
+    },
+    "AddSchedule": {
+      "title": "Add Schedule",
+      "example": {
+        "divisionId": "EC2017-01",
+        "subjectName": "Node JS",
+        "fromTime": "09:00 AM",
+        "totime": "12:30 PM",
+        "createdBy": "abc",
+        "examDate": "05/07/2022"
+      },
+      "type": "object",
+      "properties": {
+        "divisionId": {
+          "type": "string"
+        },
+        "subjectName": {
+          "type": "string"
+        },
+        "fromTime": {
+          "type": "string"
+        },
+        "totime": {
+          "type": "string"
+        },
+        "createdBy": {
+          "type": "string"
+        },
+        "examDate": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "divisionId",
+        "subjectName",
+        "fromTime",
+        "totime",
+        "createdBy",
+        "examDate"
+      ]
+    },
+    "EditSchedule": {
+      "title": "EditSchedule",
+      "example": {
+        "id": "id",
+        "divisionId": "EC2017-01",
+        "subjectName": "Node JS",
+        "fromTime": "09:00 AM",
+        "totime": "12:30 PM",
+        "createdBy": "abc",
+        "examDate": "05/07/2022"
+      },
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "divisionId": {
+          "type": "string"
+        },
+        "subjectName": {
+          "type": "string"
+        },
+        "fromTime": {
+          "type": "string"
+        },
+        "totime": {
+          "type": "string"
+        },
+        "createdBy": {
+          "type": "string"
+        },
+        "examDate": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "divisionId",
+        "subjectName",
+        "fromTime",
+        "totime",
+        "createdBy",
+        "examDate"
+      ]
+    },
+    "AddStudent": {
+      "title": "Add Student",
+      "example": {
+        "firstname": "firstname",
+        "lastname": "lastname",
+        "middlename": "middlename",
+        "idnumber": "11",
+        "address": "abc , abc soc.",
+        "pincode": 395006,
+        "mobilenumber": 1234567890,
+        "aadharnumber": 123456789012,
+        "email": "email",
+        "password": "password",
+        "confirmPassword": "password",
+        "createdBy": "abc"
+      },
+      "type": "object",
+      "properties": {
+        "firstname": {
+          "type": "string"
+        },
+        "lastname": {
+          "type": "string"
+        },
+        "middlename": {
+          "type": "string"
+        },
+        "idnumber": {
+          "type": "string"
+        },
+        "address": {
+          "type": "string"
+        },
+        "pincode": {
+          "type": "number"
+        },
+        "mobilenumber": {
+          "type": "number"
+        },
+        "aadharnumber": {
+          "type": "number"
+        },
+        "email": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        },
+        "confirmPassword": {
+          "type": "string"
+        },
+        "createdBy": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "firstname",
+        "lastname",
+        "middlename",
+        "idnumber",
+        "address",
+        "pincode",
+        "mobilenumber",
+        "aadharnumber",
+        "email",
+        "password",
+        "confirmPassword",
+        "createdBy"
+      ]
+    },
+    "EditStudent": {
+      "title": "EditStudent",
+      "example": {
+        "id": "id",
+        "firstname": "firstname",
+        "lastname": "lastname",
+        "middlename": "middlename",
+        "idnumber": "11",
+        "address": "abc , abc soc.",
+        "pincode": 395006,
+        "mobilenumber": 1234567890,
+        "aadharnumber": 123456789012,
+        "email": "email",
+        "password": "password",
+        "confirmPassword": "password",
+        "createdBy": "abc"
+      },
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "firstname": {
+          "type": "string"
+        },
+        "lastname": {
+          "type": "string"
+        },
+        "middlename": {
+          "type": "string"
+        },
+        "idnumber": {
+          "type": "string"
+        },
+        "address": {
+          "type": "string"
+        },
+        "pincode": {
+          "type": "number"
+        },
+        "mobilenumber": {
+          "type": "number"
+        },
+        "aadharnumber": {
+          "type": "number"
+        },
+        "email": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        },
+        "confirmPassword": {
+          "type": "string"
+        },
+        "createdBy": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "firstname",
+        "lastname",
+        "middlename",
+        "idnumber",
+        "address",
+        "pincode",
+        "mobilenumber",
+        "aadharnumber",
+        "email",
+        "password",
+        "confirmPassword",
+        "createdBy"
+      ]
+    },
+    "AddTeacher": {
+      "title": "Add Teacher",
+      "example": {
+        "firstname": "firstname",
+        "lastname": "lastname",
+        "middlename": "middlename",
+        "idnumber": "11",
+        "address": "abc , abc soc.",
+        "pincode": 395006,
+        "mobilenumber": 1234567890,
+        "aadharnumber": 123456789012,
+        "experience": "5year",
+        "basicSalary": "50000",
+        "email": "email",
+        "password": "password",
+        "confirmPassword": "password",
+        "createdBy": "abc"
+      },
+      "type": "object",
+      "properties": {
+        "firstname": {
+          "type": "string"
+        },
+        "lastname": {
+          "type": "string"
+        },
+        "middlename": {
+          "type": "string"
+        },
+        "idnumber": {
+          "type": "string"
+        },
+        "address": {
+          "type": "string"
+        },
+        "pincode": {
+          "type": "number"
+        },
+        "mobilenumber": {
+          "type": "number"
+        },
+        "aadharnumber": {
+          "type": "number"
+        },
+        "experience": {
+          "type": "string"
+        },
+        "basicSalary": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        },
+        "confirmPassword": {
+          "type": "string"
+        },
+        "createdBy": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "firstname",
+        "lastname",
+        "middlename",
+        "idnumber",
+        "address",
+        "pincode",
+        "mobilenumber",
+        "aadharnumber",
+        "experience",
+        "basicSalary",
+        "email",
+        "password",
+        "confirmPassword",
+        "createdBy"
+      ]
+    },
+    "EditTeacher": {
+      "title": "EditTeacher",
+      "example": {
+        "id": "id",
+        "firstname": "firstname",
+        "lastname": "lastname",
+        "middlename": "middlename",
+        "idnumber": "11",
+        "address": "abc , abc soc.",
+        "pincode": 395006,
+        "mobilenumber": 1234567890,
+        "aadharnumber": 123456789012,
+        "experience": "5year",
+        "basicSalary": "50000",
+        "email": "email",
+        "password": "password",
+        "confirmPassword": "password",
+        "createdBy": "abc"
+      },
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "firstname": {
+          "type": "string"
+        },
+        "lastname": {
+          "type": "string"
+        },
+        "middlename": {
+          "type": "string"
+        },
+        "idnumber": {
+          "type": "string"
+        },
+        "address": {
+          "type": "string"
+        },
+        "pincode": {
+          "type": "number"
+        },
+        "mobilenumber": {
+          "type": "number"
+        },
+        "aadharnumber": {
+          "type": "number"
+        },
+        "experience": {
+          "type": "string"
+        },
+        "basicSalary": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        },
+        "confirmPassword": {
+          "type": "string"
+        },
+        "createdBy": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "firstname",
+        "lastname",
+        "middlename",
+        "idnumber",
+        "address",
+        "pincode",
+        "mobilenumber",
+        "aadharnumber",
+        "experience",
+        "basicSalary",
+        "email",
+        "password",
+        "confirmPassword",
+        "createdBy"
+      ]
+    }
+  },
+  "tags": [
+    {
+      "name": "Admins"
+    },
+    {
+      "name": "Attendance"
+    },
+    {
+      "name": "Division"
+    },
+    {
+      "name": "Result"
+    },
+    {
+      "name": "Salary"
+    },
+    {
+      "name": "Schedule"
+    },
+    {
+      "name": "Students"
+    },
+    {
+      "name": "Teachers"
+    }
+  ]
+}
